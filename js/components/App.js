@@ -71,15 +71,14 @@ componentDidMount = () => {
       <div>
       <span className="title"> Build a Random Quote Machine - Challenge </span>
         <div className="quote-box">
-            <div className="quote-text">
-              <i className="fa fa-quote-left"> </i><span id="text">{this.state.currentQuote}</span>
+            <div><span id="text">{this.state.currentQuote}</span>
             </div>
-            <div className="quote-author">
-              - <span id="author">{this.state.currentAuthor}</span>
+            <div style={{ width: '450px', height: 'auto', clear: 'both', paddingTop: '20px', fontSize: '16px', textAlign: 'right'}}>
+              - <span>{this.state.currentAuthor}</span>
             </div>
             <div style={{marginTop: '15px'}} className="buttons">
-              <Button content="Tweet" style={{float: 'left', width: '120px', height:'30px'}} className="button" onClick={()=>this.onTweetClick()} target="_blank" id="tweet-quote"/>
-              <Button style={{float: 'right', width: '120px', height:'30px'}} className="button" onClick={()=>this.getQuote()} id="new-quote">New quote</Button>
+              <button content="Tweet" style={{float: 'left', width: '120px', height:'30px'}}  onClick={()=>this.onTweetClick()} target="_blank" > Tweet </button>
+              <button style={{float: 'right', width: '120px', height:'30px'}}  onClick={()=>this.getQuote()} >New quote</button>
               
             </div>
             <div style={{marginTop: '60px'}}>
