@@ -71,7 +71,7 @@ componentDidMount = () => {
       <div>
       <span className="title"> Build a Random Quote Machine - Challenge </span>
         <div className="quote-box">
-            <div><span id="text">{this.state.currentQuote}</span>
+            <div><span id="text">"{this.state.currentQuote}"</span>
             </div>
             <div style={{ width: '450px', height: 'auto', clear: 'both', paddingTop: '20px', fontSize: '16px', textAlign: 'right'}}>
               - <span>{this.state.currentAuthor}</span>
