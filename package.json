@@ -31,8 +31,7 @@
   },
   "scripts": {
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node ./app.js",
-    "heroku-postbuild": "webpack --config ./webpack.prod.config.js --progress --colors"
+    "start": "node ./app.js"
   },
   "author": "Glendon Philipp Baculio",
   "license": "ISC"
