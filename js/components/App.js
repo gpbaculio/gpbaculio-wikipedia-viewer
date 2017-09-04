@@ -69,7 +69,7 @@ componentDidMount = () => {
   render() {
     return (
       <div>
-      <span className="title"> Build a Random Quote Machine - Challenge </span>
+      <span className="title"> Reactjs Random Quote Machine </span>
         <div className="quote-box">
             <div><span id="text">"{this.state.currentQuote}"</span>
             </div>
