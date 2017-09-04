@@ -80,9 +80,14 @@ componentDidMount = () => {
             <div style={{marginTop: '15px'}} className="buttons">
               <Button content="Tweet" style={{float: 'left', width: '120px', height:'30px'}} className="button" onClick={()=>this.onTweetClick()} target="_blank" id="tweet-quote"/>
               <Button style={{float: 'right', width: '120px', height:'30px'}} className="button" onClick={()=>this.getQuote()} id="new-quote">New quote</Button>
+              
+            </div>
+            <div style={{marginTop: '60px'}}>
+              <span style={{float: 'left'}}> Deployed Heroku App: <a href="https://gpbaculio-random-quote.herokuapp.com/"> link </a> </span>
+              <span style={{float: 'right'}}> Github Repo: <a href="https://github.com/iamglenbacs/fcc_random_quote_machine"> link </a> </span>
             </div>
           </div>
-        <div className="footer"> Developed by <strong> Glendon Philipp Baculio </strong></div>
+        <div className="footer"> Developed by <strong> Glendon Philipp Baculio </strong> </div>
       </div>
     )
   }
