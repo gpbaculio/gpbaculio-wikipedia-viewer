@@ -65,7 +65,7 @@ componentDidMount = () => {
               <div> <img style={{width: '100px', height: '100px'}} src={this.state.icon} /> </div>
               <span style={{fontSize: '18px'}}> {`${this.state.main} - ${this.state.description}`}  </span>
               <div style={{marginTop: '40px'}}>
-                <span style={{float: 'left'}}> Deployed Heroku App: <a href="https://gpbaculio-random-quote.herokuapp.com/"> link </a> </span>
+                <span style={{float: 'left'}}> Deployed Heroku App: <a href="https://gpbaculio-local-weather.herokuapp.com/"> link </a> </span>
                 <span style={{float: 'right'}}> Github Repo: <a href="https://github.com/iamglenbacs/gpbaculio-local-weather"> link </a> </span>
             </div>
             </div>
