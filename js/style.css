@@ -14,6 +14,12 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight:400;
 }
+.article {
+  background-color: white !important;
+}
+.article:hover {
+  border-left: solid #006400 3px;
+}
 .title {
   width:450px;
   text-align:center;
@@ -43,7 +49,7 @@ body {
   width:450px;
   padding:40px 50px;
   display:table;
-  background-color:#fff;
+  background-color:#E9EBEE;
   text-align:center;
 }
 
