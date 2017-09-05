@@ -1,1 +1,1 @@
-# FreeCodeCamp Show Local Weather Challenge Built in React
+# FreeCodeCamp Build a Wikipedia Viewer Challenge Built in React
