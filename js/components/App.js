@@ -74,6 +74,10 @@ class App extends Component {
                 <form  onSubmit={this._search}><input placeholder={'Search Wikipedia'} onChange={this._handleInputChange} /></form>
                 <button onClick={(e) => this._search(e)}> Search </button></div>
               {this._renderArticles()}
+              <div style={{marginTop: '40px'}}>
+                <span style={{float: 'left'}}> Deployed Heroku App: <a href="https://gpbaculio-wikipedia-viewer.herokuapp.com/"> link </a> </span>
+                <span style={{float: 'right'}}> Github Repo: <a href="https://github.com/iamglenbacs/gpbaculio-wikipedia-viewer"> link </a> </span>
+            </div>
             </div>
           <span className="footer"> Developed by Glendon Philipp Baculio </span>
         </div>
