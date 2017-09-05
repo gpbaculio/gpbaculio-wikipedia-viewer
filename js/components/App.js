@@ -14,6 +14,7 @@ state = {
   description:'',
   main:'',
   currentTempInCelsius:'',
+  currentTempInFarenheit:'',
   icon:'',
 }
 
@@ -26,11 +27,13 @@ componentDidMount = () => {
         url: "https://fcc-weather-api.glitch.me/api/current?"+ lat + "&" + lon, 
         success: (result) => {
           console.log("result = ", result)
-          let currentTempInCelsius = Math.round(result.main.temp * 10) / 10; // celcius formula
+          let currentTempInCelsius   = Math.round(result.main.temp * 10) / 10; // celcius formula
+          let currentTempInFarenheit = Math.round(parseInt(result.main.temp) * 9/5 + 32); // convert celcius to farenheit (formula)
           this.setState((prevState, props) => ({
             city: result.name.concat(" City"),
             country: result.sys.country,
-            temperature: currentTempInCelsius+" "+ String.fromCharCode(176), // String.fromCharCode(176) is a degree icon
+            currentTempInCelsius: currentTempInCelsius+" "+ String.fromCharCode(176), // String.fromCharCode(176) is a degree icon
+            currentTempInFarenheit: currentTempInFarenheit+" "+ String.fromCharCode(176),
             main: result.weather[0].main,
             icon: result.weather[0].icon,
             description: result.weather[0].description
@@ -52,9 +55,11 @@ componentDidMount = () => {
   }
 }
 
-
-
-
+  _handleTempUnitClick = (unit) => {
+    this.setState((prevState) => ({
+      temperatureUnit: Boolean(unit === 'C') ? 'F' : 'C',
+    }));
+  }
 
   render() {
     return (
@@ -62,6 +67,7 @@ componentDidMount = () => {
           <span className="title"> Reactjs Show the Local Weather </span>
             <div className="container">
               <span style={{fontSize: '20px'}}> {`${this.state.city}, ${this.state.country}`} </span>
+              <div style={{fontSize: '20px', marginTop:'10px'}}> {Boolean(this.state.temperatureUnit === 'C') ? this.state.currentTempInCelsius : this.state.currentTempInFarenheit} <span style={{cursor: 'pointer'}} className="tempUnit" onClick={() => this._handleTempUnitClick(this.state.temperatureUnit)}> {this.state.temperatureUnit} </span></div>
               <div> <img style={{width: '100px', height: '100px'}} src={this.state.icon} /> </div>
               <span style={{fontSize: '18px'}}> {`${this.state.main} - ${this.state.description}`}  </span>
               <div style={{marginTop: '40px'}}>
