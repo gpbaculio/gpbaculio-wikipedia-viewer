@@ -32,26 +32,8 @@ body {
   color:#fff;
   
 }
-.footer a {
-    font-weight:500;
-    text-decoration:none;
-    color:#fff;
-  }
-  .quote-text {
-   
-    text-align:center;
-    width:450px;
-    height:auto;
-    clear:both;
-    font-weight:500;
-    font-size:1.75em;
-  }
-  .quote-text i {
-      font-size:1.0em;
-      margin-right: 0.4em;
-  }
 
-.quote-box {
+.container {
   border-radius:3px;
   position:relative;
   margin:5% auto auto auto;
@@ -59,6 +41,7 @@ body {
   padding:40px 50px;
   display:table;
   background-color:#fff;
+  text-align:center;
 }
 
   .buttons {
