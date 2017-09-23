@@ -65,7 +65,7 @@ class App extends Component {
   render() {
     return (
         <div> 
-          <span className="title"> Reactjs Show the Local Weather </span>
+          <span className="title"> Reactjs Wikipedia Viewer </span>
             <div className="container">
               <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
                 <button type="button">Random Article</button>
